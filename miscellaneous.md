@@ -3,15 +3,8 @@ miscellaneous
 
 # passwordless `sudo`
 
-## modify the sudoers file:
-
+modify the sudoers file (`$ sudo visudo`) and add the following content:
 ```bash
-$ sudo visudo
-```
-
->add the following content:
-
->>```bash
 # passwordless sudo for your-user for all commands.
 your-user all=(all) nopasswd: all
 ```

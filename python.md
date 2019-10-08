@@ -4,20 +4,9 @@ python
 [documentation](https://www.python.org/doc/)
 [the hitchhiker's guide to python](http://docs.python-guide.org/en/latest/)
 
-# install
+# reload classes in the interpreter
 
-## macos
-
-```bash
-$ brew install python
-$ pip install virtualenv virtualenvwrapper pep8
-```
-
-# notes
-
-## reload classes in the interpreter
-
-### 2.7
+## 2.7
 
 ```bash
 $ python
