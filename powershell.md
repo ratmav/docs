@@ -41,3 +41,18 @@ $Host.PrivateData.DebugForegroundColor    = "DarkCyan"
 $Host.PrivateData.VerboseForegroundColor  = "Gray"
 $Host.PrivateData.ProgressForegroundColor = "DarkCyan"
 ```
+
+# error handling
+
+powershell supports [terminating](https://docs.microsoft.com/en-us/powershell/scripting/developer/cmdlet/terminating-errors?view=powershell-6) and [nonterminating](https://docs.microsoft.com/en-us/powershell/scripting/developer/cmdlet/non-terminating-errors?view=powershell-6) errors. the key difference is that a terminating error will halt execution, where a nonterminating error will simply print an error message and allow execution to continue. use flags such as `-ErrorAction` in order to achieve desired behavior.
+
+# debugging
+
+powershell uses the `Set-PSBreakpoint` cmdlet, which can be run from a `pwsh` interpreter instance:
+
+```shell
+$ pwsh
+PS /Users/username> Set-PSBreakpoint -Line 221 ./your_script.ps1
+```
+
+on the next run of `your_script.ps1` from the interpreter, execution will pause at the specified line. To list all breakpoints, use `Get-PSBreakpoint`. To clear a specific breakpoint, use `Remove-PSBreakpoint`. To clear all breakpoints, chain the two: `Get-PSBreakpoint | Remove-PSBreakpoint`.
