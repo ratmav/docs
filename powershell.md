@@ -3,7 +3,7 @@ powershell
 
 # setup
 
-[linter](https://github.com/PowerShell/PSScriptAnalyzer)
+[psscriptanalyzer](https://github.com/PowerShell/PSScriptAnalyzer)
 
 ## macos
 
