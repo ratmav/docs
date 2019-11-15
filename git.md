@@ -60,13 +60,39 @@ $ git config --global core.excludesfile '~/.gitignore_global'
 *.swo
 ```
 
-## project specific email addresses
+## project specific configuration
 
-### create the global alias:
+assuming you have a `~/.misc_envars` file, or something similar, that's sourced into your dotfiles, you can define functions like:
+
+```shell
+# some example variables.
+export WEWLAD_NO="buTWhy?"
+export COMMIT_SECRETS="w0uldYouDOThIs!?!!"
+
+gconf_clientfoo() {
+  git config user.email "your.user@clientfoo.com"
+}
+
+gconf_clientbar() {
+  git config user.email "your.user@clientbar.com"
+  git config user.url "https://github.com/look-a-client-specific-user"
+  git config user.signingkey oHB0ygpGS1gn3dC0mm1ts
+  git config credential.useHttpPath true # cloning via https, are we?
+  git config credential.helper osxkeychain
+  git config commit.gpgsign true # moar gee pah gee
+  git config pgp.program gpg # even moar gee pah gee
+}
+```
+
+**note**: commiting secrets is a bad plan. it's a good plan to keep creds and project-specific git config functions in a seperate file, like `~/.misc_envars` and then gitignoring the `.misc_envars` file. to use, clone a repo, move into it, then run the git config function of your choice.
+
+this is _essentially_ what a git alias is doing, except the git alias prepends what's in the single quotes with `git`: for example
 
 ```bash
-$ git config --global alias.workprofile 'config user.email "user@work-email.com"'
+$ git config --global alias.clientfoo 'config user.email "your.user@clientfoo.com"'
 ```
+
+is like `gconf_clientfoo` function in `~/.misc_envars`. aliases work best for simple wrappers around git commands. for more full featured configuration, live off the land (bash).
 
 ### use the alias in appropriate projects:
 
