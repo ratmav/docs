@@ -1,8 +1,22 @@
 python
 ======
 
-[documentation](https://www.python.org/doc/)
-[the hitchhiker's guide to python](http://docs.python-guide.org/en/latest/)
+* [documentation](https://www.python.org/doc/)
+* [the hitchhiker's guide to python](http://docs.python-guide.org/en/latest/)
+    * **NOTE**: this suggests using [pipenv](https://pipenv.readthedocs.io/en/latest/), which frankly doesn't integrate well with many projects due to community disagreements. use `pyenv` and `virtualenv` instead.
+
+# version management
+
+## macos
+
+1. install [homebrew](https://brew.sh/): `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
+2. install [pyenv](https://github.com/pyenv/pyenv): `brew install pyenv`
+3. install [pyenv-virtualenv](https://github.com/pyenv/pyenv-virtualenv): `brew install pyenv-virtualenv`
+4. add the following to your shell configuration:
+    ```bash
+    eval "$(pyenv init -)"
+    eval "$(pyenv virtualenv-init -)"
+    ```
 
 # reload classes in the interpreter
 
