@@ -3,9 +3,9 @@ kvm
 
 [documents](https://www.linux-kvm.org/page/documents)
 
-# installation
+## installation
 
-## verify the cpu and bios kvm support
+### verify the cpu and bios kvm support
 
 ```bash
 $ sudo egrep -c '(vmx|svm)' /proc/cpuinfo
@@ -13,19 +13,19 @@ $ sudo egrep -c '(vmx|svm)' /proc/cpuinfo
 
 **note**:output should be “1” or greater.
 
-## install packages
+### install packages
 
 ```bash
 $ sudo yum install -y qemu-kvm libvirt libvirt-python libguestfs-tools virt-install
 ```
 
-## enable and start `libvirt`
+### enable and start `libvirt`
 
 ```bash
 $ sudo systemctl enable libvirtd && systemctl start libvirtd
 ```
 
-## verify kernel modules
+### verify kernel modules
 
 ```bash
 $ sudo lsmod | grep kvm
@@ -33,21 +33,21 @@ $ sudo lsmod | grep kvm
 
 **note**: should see results for `kvm` and `kvm_intel` (on intel hardware).
 
-## network bridge
+### network bridge
 
-### host-only bridge
+#### host-only bridge
 
 **todo**
 
-### bridge to lan
+#### bridge to lan
 
-#### bridge ethernet interface
+##### bridge ethernet interface
 
 **note**: assumes wired interface's identifier is `em1`. verify the identifier for the interface being bridged via `ip addr show`.
 
 add `bridge=br0` to the end of `/etc/sysconfig/network-scripts/ifcfg-em1`.
 
-#### add bridge to network scripts
+##### add bridge to network scripts
 
 add the following to `/etc/sysconfig/network-scripts/ifcfg-br0`:
 
@@ -61,7 +61,7 @@ type="bridge"
 delay="0"
 ```
 
-### enable network forwarding
+#### enable network forwarding
 
 add `net.ipv4.ip_forward = 1` to `/etc/sysctl.conf`, then read the configuration:
 
@@ -69,16 +69,16 @@ add `net.ipv4.ip_forward = 1` to `/etc/sysctl.conf`, then read the configuration
 $ sudo sysctl -p /etc/sysctl.conf
 ```
 
-### restart network manager
+#### restart network manager
 
 ```bash
 $ sudo systemctl restart networkmanager
 ```
 **note**: for the bridge to be usable by guests, a reboot may be required.
 
-## storage pools
+### storage pools
 
-### create pool directories
+#### create pool directories
 
 ```bash
 $ mkdir /home/deployment-user/kvm_storage
@@ -88,21 +88,21 @@ $ sudo virsh pool-build images # guest disk images, including "golden" images go
 
 **note**: any files moved into the `kvm_storage/images` or `kvm_storage/isos` directories will be automagically chwon'd by root.
 
-### define storage pools
+#### define storage pools
 
 ```bash
 $ sudo virsh pool-define-as isos dir - - - - "/home/deployment-user/kvm_storage/isos"
 $ sudo virsh pool-define-as images dir - - - - "/home/deployment-user/kvm_storage/images"
 ```
 
-### autostart storage pools
+#### autostart storage pools
 
 ```bash
 $ sudo virsh pool-autostart isos
 $ sudo virsh pool-autostart images
 ```
 
-### start storage pools
+#### start storage pools
 
 ```bash
 $ sudo virsh pool-start isos

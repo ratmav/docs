@@ -3,19 +3,19 @@ git
 
 [documentation](https://git-scm.com/doc)
 
-# remote git host/server
+## remote git host/server
 
 **note**: access to remote repositories is managed via [[ authorized ssh keys | ssh key management ]] for the `git` user on the remote host.
 
-## setup
+### setup
 
-### create the remote git user
+#### create the remote git user
 
 ```bash
 $ sudo adduser git
 ```
 
-### create the remote storage directory
+#### create the remote storage directory
 
 ```bash
 $ sudo su git
@@ -23,7 +23,7 @@ $ cd ~/
 $ mkdir repositories
 ```
 
-### initialize the remote repository
+#### initialize the remote repository
 
 ```bash
 $ sudo su git
@@ -37,22 +37,22 @@ $ find objects -type d -exec chmod 02770 {} \;
 $ exit
 ```
 
-## disable/enable shell git shell access
+### disable/enable shell git shell access
 
 ```bash
 $ sudo vi /etc/passwd
 ```
 >change the `git` user's shell from `/bin/bash` to `/usr/bin/git-shell` to disable, vice versa to enable.
 
-# local git client
+## local git client
 
-## global `.gitignore`
+### global `.gitignore`
 
 ```bash
 $ git config --global core.excludesfile '~/.gitignore_global'
 ```
 
-### example
+#### example
 
 ```bash
 # vim buffers.
@@ -60,7 +60,7 @@ $ git config --global core.excludesfile '~/.gitignore_global'
 *.swo
 ```
 
-## project specific configuration
+### project specific configuration
 
 assuming you have a `~/.misc_envars` file, or something similar, that's sourced into your dotfiles, you can define functions like:
 
@@ -94,16 +94,16 @@ $ git config --global alias.clientfoo 'config user.email "your.user@clientfoo.co
 
 is like `gconf_clientfoo` function in `~/.misc_envars`. aliases work best for simple wrappers around git commands. for more full featured configuration, live off the land (bash).
 
-### use the alias in appropriate projects:
+#### use the alias in appropriate projects:
 
 ```bash
 $ cd project-name
 $ git workprofile
 ```
 
-## local repository management
+### local repository management
 
-### create local repository
+#### create local repository
 
 ```bash
 $ cd project-name
@@ -112,7 +112,7 @@ $ git add *
 $ git commit -m “initial commit"
 ```
 
-### push local repository to remote host/server
+#### push local repository to remote host/server
 
 ```bash
 $ cd project-name
@@ -120,7 +120,7 @@ $ git remote add origin ssh://git@your.domain.name/home/git/repositories/project
 $ git push origin master
 ```
 
-### create branch
+#### create branch
 
 ```bash
 $ cd project-name
@@ -129,9 +129,9 @@ $ git push -u origin branch-name
 $ git branch --set-upstream-to=origin/branch-name
 ```
 
-### sync branch with `master`
+#### sync branch with `master`
 
-#### merging from `master`
+##### merging from `master`
 
 ```bash
 $ cd project-name
@@ -144,7 +144,7 @@ $ git merge master
 $ git push origin branch-name
 ```
 
-#### rebasing on `master`
+##### rebasing on `master`
 
 ```bash
 $ cd project-name
@@ -158,11 +158,11 @@ $ git diff # confirm expected changes, resolve conflicts, etc.
 $ git push origin branch-name --force
 ```
 
-##### a note on `--force`
+###### a note on `--force`
 
 typically, `rebase` is used to groom git logs so those logs provide a more meainingful history of work on the project. this means that history is typically overwritten on a rebase, which means that a local working copy is going to diverge from the remote. in that case, `--force` is required to overwrite the history on the remote to match the local working copy. this introduces a smaller margin for error, so measure twice and cut once.
 
-### merging branch to `master`
+#### merging branch to `master`
 
 ```bash
 $ cd project-name
@@ -175,25 +175,25 @@ $ git merge branch-name
 $ git push origin master
 ```
 
-### branch cleanup
+#### branch cleanup
 
-#### remove remote branch
+##### remove remote branch
 
 ```bash
 $ cd project-name
 $ git push --delete origin branch-name
 ```
 
-#### remove local branch
+##### remove local branch
 
 ```bash
 $ cd project-name
 $ git branch -d branch-name
 ```
 
-### remove files from repo and history
+#### remove files from repo and history
 
-#### most recent commit
+##### most recent commit
 
 ```
 $ git rm --cached file_or_dir
@@ -201,16 +201,16 @@ $ git commit --amend -chead
 $ git push --force
 ```
 
-#### all commits
+##### all commits
 
 ```
 $ git filter-branch --tree-filter "rm -rf file_or_dir"
 $ git push --force
 ```
 
-### undo commit
+#### undo commit
 
-#### local and remote
+##### local and remote
 
 ```
 $ git reset --hard head~1

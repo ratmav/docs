@@ -3,14 +3,14 @@ docker
 
 [documentation](https://docs.docker.com/)
 
-# private registry build
+## private registry build
 
-## host details
+### host details
 
 * os: **centos 7**
 * user: `root`
 
-## install docker
+### install docker
 
 ```bash
 $ yum update # update packages.
@@ -23,7 +23,7 @@ $ systemctl enable docker # start docker on boot.
 $ docker run hello-world # test docker install.
 ```
 
-## configure registry
+### configure registry
 
 **note**: configured to use aws s3 for image storage.
 
@@ -52,7 +52,7 @@ health:
     threshold: 3
 ```
 
-## authentication
+### authentication
 
 * user: `your-docker-user`
 * pass: `your-docker-password`
@@ -62,7 +62,7 @@ $ mkdir auth
 $ docker run --entrypoint htpasswd registry:2 -bbn your-docker-user your-docker-password > auth/htpasswd
 ```
 
-## start and create registry container
+### start and create registry container
 
 ```bash
 # auth and tls information are included in the container as mounted volumes.
@@ -78,7 +78,7 @@ $ docker run -d -p 5000:5000 --restart=always --name registry \
   registry:2
 ```
 
-## add registry users
+### add registry users
 
 ```bash
 # stop the registry container:
@@ -100,6 +100,6 @@ $ docker run -d -p 5000:5000 --restart=always --name registry \
   registry:2
 ```
 
-## remove registry users
+### remove registry users
 
 just remove a given user's entry from the `/root/auth/htpasswd` file.
