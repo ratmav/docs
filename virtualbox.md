@@ -39,5 +39,5 @@ be sure to enable the network interface via the anaconda installer gui.
 8. use shared folder to copy local public ssh key from host to guest.
 9. cat public ssh key from shared folder to `~/.ssh/authorized_keys`.
 10. run `chmod -R go= ~/.ssh` on the guest to correct permissions.
-11. run `VBoxManage guestproperty get <vm-name> "/VirtualBox/GuestInfo/Net/0/V4/IP" | cut -f2 -d " "` on the host to get the guest
+11. run `VBoxManage guestproperty get <vm-name> "/VirtualBox/GuestInfo/Net/0/V4/IP" | cut -f2 -d " "` on the host to get the guest's IP.
 11. test ssh access from host to guest.
