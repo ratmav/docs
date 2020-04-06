@@ -1,5 +1,5 @@
-ssh key management
-==================
+ssh keys
+========
 
 ## general information on pki and mfa
 

@@ -1,26 +1,9 @@
 python
 ======
 
-* [documentation](https://www.python.org/doc/)
-* [the hitchhiker's guide to python](http://docs.python-guide.org/en/latest/)
-    * **NOTE**: this suggests using [pipenv](https://pipenv.readthedocs.io/en/latest/), which frankly doesn't integrate well with many projects due to community disagreements. use `pyenv` and `virtualenv` instead.
+## reload classes in the interpreter
 
-# version management
-
-## macos
-
-1. install [homebrew](https://brew.sh/): `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
-2. install [pyenv](https://github.com/pyenv/pyenv): `brew install pyenv`
-3. install [pyenv-virtualenv](https://github.com/pyenv/pyenv-virtualenv): `brew install pyenv-virtualenv`
-4. add the following to your shell configuration:
-    ```bash
-    eval "$(pyenv init -)"
-    eval "$(pyenv virtualenv-init -)"
-    ```
-
-# reload classes in the interpreter
-
-## 2.7
+**note**: tested on v2.7
 
 ```bash
 $ python
@@ -36,7 +19,7 @@ v2
 
 ## autoload virtualenv from script
 
-*note*: works on 2.7 and 3.6
+**note**: works on 2.7 and 3.6
 
 ```python
 #!/usr/bin/env python
