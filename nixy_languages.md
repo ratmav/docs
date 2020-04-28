@@ -5,8 +5,8 @@
 
 1. install [asdf](https://github.com/asdf-vm/asdf)
     * macos:
-        1. install [homebrew](https://brew.sh/): `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"`
-        2. install [asdf](https://asdf-vm.com/#/): `git clone https://github.com/asdf-vm/asdf.git $HOME/.asdf`
+        a. install [homebrew](https://brew.sh/): `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"`
+        b. install [asdf](https://asdf-vm.com/#/): `git clone https://github.com/asdf-vm/asdf.git $HOME/.asdf`
 2. install language-specific plugins (see below)
 3. configure your shell:
     ```shell
