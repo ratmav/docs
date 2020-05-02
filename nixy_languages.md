@@ -95,8 +95,16 @@ $ golint # or whatever linter the project is using.
 ```
 ## ruby
 
-[asdf ruby plugin](https://github.com/asdf-vm/asdf-ruby): `https://github.com/asdf-vm/asdf-ruby`
+[asdf ruby plugin](https://github.com/asdf-vm/asdf-ruby): `asdf plugin-add ruby https://github.com/asdf-vm/asdf-ruby`
 
 ## hcl (terraform)
 
 [asdf terraform plugin](https://github.com/Banno/asdf-hashicorp)
+
+## node.js
+
+[asdf node.js plugin](https://github.com/asdf-vm/asdf-nodejs):
+    ```shell
+    $ asdf plugin-add nodejs https://github.com/asdf-vm/asdf-nodejs.git
+    $ bash ~/.asdf/plugins/nodejs/bin/import-release-team-keyring
+    ```
