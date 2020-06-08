@@ -93,6 +93,27 @@ $ go test
 $ go vet
 $ golint # or whatever linter the project is using.
 ```
+
+### pretty print json from struct
+
+```go
+import "fmt"
+
+type Foo struct {
+	ID  string    `json:"id"`
+	Woo string    `json:"woo"`
+	Lad string    `json:"lad"`
+}
+
+newFoo := Foo{}
+newFoo.ID = "D34DB33F"
+newFoo.Woo = "goodTimes.jpg"
+newFoo.Lad = "Ric Flair"
+
+foo, _ := json.MarshalIndent(yourStruct, "", "  ")
+fmt.Printf("%s\n", foo)
+```
+
 ## ruby
 
 [asdf ruby plugin](https://github.com/asdf-vm/asdf-ruby): `asdf plugin-add ruby https://github.com/asdf-vm/asdf-ruby`
