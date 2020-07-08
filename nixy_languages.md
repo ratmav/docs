@@ -79,6 +79,7 @@ some packages you may find useful; don't add these to `go.mod`:
 run the following when imports are modified.
 
 ```shell
+$ go mod init example.com/hello # run once when creating a new project/module. you may need to use the full path to the repo, for example "example.com/foo/bar/hello.git"
 $ go mod vendor # creates the vendor folder for dependencies.
 $ go mod download # downloads module dependencies, including indirects, to the vendor folder.
 $ go mod tidy # cleans up modules based on current imports. run after importing new external packages.
