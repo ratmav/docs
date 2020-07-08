@@ -84,6 +84,7 @@ $ go mod vendor # creates the vendor folder for dependencies.
 $ go mod download # downloads module dependencies, including indirects, to the vendor folder.
 $ go mod tidy # cleans up modules based on current imports. run after importing new external packages.
 $ go mod verify # confirms all modules are downloaded, checksums are correct, no missing packages, etc.
+$ go clean --modcache # run when you want to wipe out all local vendored modules. probably a good idea to manually remove the vendor folder first.
 ```
 
 ### pre-push checks
