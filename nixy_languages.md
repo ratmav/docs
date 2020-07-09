@@ -87,6 +87,10 @@ $ go mod verify # confirms all modules are downloaded, checksums are correct, no
 $ go clean --modcache # run when you want to wipe out all local vendored modules. probably a good idea to manually remove the vendor folder first.
 ```
 
+#### updating vendored modules
+
+typically, you just `go get -u the.domain/foo/bar/baz/package_name` to install or update a vendored package. by default, `go mod` will attempt to pull **all** modules down, which you might not want or need (like in a ci/cd container). in that case, when you _just_ want to pull down a single specific package, use the `-f` flag: `go get -f -u the.domain/foo/bar/baz/package_name`.
+
 ### pre-push checks
 
 ```shell
