@@ -116,7 +116,7 @@ newFoo.ID = "D34DB33F"
 newFoo.Woo = "goodTimes.jpg"
 newFoo.Lad = "Ric Flair"
 
-foo, _ := json.MarshalIndent(yourStruct, "", "  ")
+foo, _ := json.MarshalIndent(newFoo, "", "  ")
 fmt.Printf("%s\n", foo)
 ```
 
