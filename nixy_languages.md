@@ -13,6 +13,16 @@
     $ echo -e '\n. $HOME/.asdf/asdf.sh' >> ~/.bashrc # or .bash_profile, etc.
     $ echo -e '\n. $HOME/.asdf/completions/asdf.bash' >> ~/.bashrc # or .bash_profile, etc.
     ```
+
+## bash
+
+### redirect stdout and stderr to file
+
+```bash
+command1 >> log_file 2>&1 # same file
+command1 >> log_file 2>> err_file # different files
+```
+
 ## python
 
 [asdf python plugin](https://github.com/danhper/asdf-python): `asdf plugin-add python`
