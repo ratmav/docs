@@ -79,10 +79,8 @@ some packages you may find useful; don't add these to `go.mod`:
 
 * [delve](https://github.com/go-delve/delve)
     * `go get github.com/go-delve/delve/cmd/dlv`
-* [golint](https://github.com/golang/lint)
-    * `go get -u golang.org/x/lint/golint`
-* [gore](https://github.com/motemen/gore)
-    * `go get -u github.com/motemen/gore/cmd/gore`
+* [yaegi](https://github.com/traefik/yaegi)
+    * `go get -u github.com/traefik/yaegi/cmd/yaegi`
 
 ### module management
 
