@@ -127,7 +127,17 @@ newFoo.Lad = "Ric Flair"
 foo, _ := json.MarshalIndent(newFoo, "", "  ")
 fmt.Printf("%s\n", foo)
 ```
-### `filter` in go
+
+### fp shenanigans
+
+there may or may not be a handy way to hang this on appropriate types (int, maps, etc.), to enable things like:
+
+```go
+var foo []int{1, 2, 3}
+foo.filter(isEven)
+```
+
+#### integer `filter`
 
 ```go
 package main
@@ -136,27 +146,31 @@ import (
 	"fmt"
 )
 
-// given an array of integers, filter odd integers out in place.
-func main() {
-        // the given array
-	var x = []int{90, 15, 81, 87, 47, 59, 81, 18, 25, 40, 56, 8}
+func isEven(element int) bool {
+	if element%2 == 0 {
+		return true
+	}
+	return false
+}
 
-        // note: i indexes the starting array, j indexes the final array. the trick here is that
-        //       the element at i is overwritten with the element at j, pushing the filtered elements
-        //       to the front of the array, x. when the last element in x is reached, all of the
-        //       filtered elements are at the front of x, and j is the position of the last valid
-        //       element, so slicing x at the j index returns the filtered array.
+/*
+ note: i indexes the starting array, j indexes the final array. the trick here is that
+       the element at i is overwritten with the element at j, pushing the filtered elements
+       to the front of the array, x. when the last element in x is reached, all of the
+       filtered elements are at the front of x, and j is the position of the last valid
+       element, so slicing x at the j index returns the filtered array.
 
+*/
+func filter(x []int, ff func(int) bool) []int {
 	// initialize j
 	j := 0
 
 	// iterate over the array
 	for i := 0; i < len(x); i++ {
 
-		// test each element of x for parity
-		if x[i]%2 == 0 {
-
-		        // if an element of x is even at index i, overwrite x at position j with said element
+		// test each element using the function parameter ff.
+		if (ff(x[i])) {
+		        // if the filter function returns true, overwrite x at position j with said element
 			x[j] = x[i]
 
 			// increment j
@@ -166,7 +180,38 @@ func main() {
 
 	// slice x up to the j index (half open range), and overwrite x with the slice.
 	x = x[:j]
-	fmt.Println(x)
+        return x
+}
+
+// given an array of integers, filter odd integers in place.
+func main() {
+	var x = []int{90, 15, 81, 87, 47, 59, 81, 18, 25, 40, 56, 8}
+
+	fmt.Println(filter(x, isEven))
+}
+```
+
+#### integer `map`
+
+```go
+func square(num int) int {
+    return num * num
+}
+
+func mapper(f func(int) int, alist []int) []int {
+    var a = make([]int, len(alist), len(alist))
+    for index, val := range alist {
+
+        a[index] = f(val)
+    }
+    return a
+}
+
+func main() {
+    alist := []int{4, 5, 6, 7}
+    result := mapper(square, alist)
+    fmt.Println(result)
+
 }
 ```
 
