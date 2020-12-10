@@ -99,6 +99,27 @@ $ go clean --modcache # run when you want to wipe out all local vendored modules
 
 typically, you just `go get -u the.domain/foo/bar/baz/package_name` to install or update a vendored package. by default, `go mod` will attempt to pull **all** modules down, which you might not want or need (like in a ci/cd container). in that case, when you _just_ want to pull down a single specific package, use the `-f` flag: `go get -f -u the.domain/foo/bar/baz/package_name`.
 
+#### using local modules
+
+edit `go.mod` to point at your module's local working copy:
+
+```go
+module example.com/localmodexample
+
+go 1.13
+
+require (
+   example.org/hello v0.0.0
+   example.org/utils v0.0.0
+
+)
+
+replace (
+   example.org/hello => ./hello
+   example.org/utils => ./utils
+)
+```
+
 ### pre-push checks
 
 ```shell
