@@ -1,5 +1,5 @@
-ssh keys
-========
+ssh
+===
 
 ## general information on pki and mfa
 
@@ -20,14 +20,22 @@ ssh keys
 ### generate a keypair
 
 ```bash
-      $ cd ~/.ssh
-      $ ssh-keygen -b 4096 -c "your.email.address@domain.tld" -f ./firstname-lastname
+ $ cd ~/.ssh
+ $ ssh-keygen -b 4096 -c "your.email.address@domain.tld" -f ./firstname-lastname
 ```
 
 ### use private keys with non-default names
 
 ```bash
-      $ echo "identityfile ~/.ssh/firstname-lastnme" >> ~/.ssh/config
+ $ echo "identityfile ~/.ssh/firstname-lastnme" >> ~/.ssh/config
+```
+
+### generate public key from private key
+
+```bash
+$ ssh-keygen -l -f ~/.ssh/id_rsa  # confirm public key not already present in cwd.
+$ ssh-keygen -y -f ~/.ssh/id_rsa > ~/.ssh/id_rsa.pub # generate public key.
+$ ssh-keygen -l -f ~/.ssh/id_rsa # confirm new public key matches existing private key.
 ```
 
 ### configure client for multiple keys
@@ -68,13 +76,13 @@ $ ssh-add -k ~/.ssh/whatever-key-you-want
 ### create list of authorized keys
 
 ```bash
-    $ touch ~/.ssh/authorized_keys
+ $ touch ~/.ssh/authorized_keys
 ```
 
 ### append new key to list of authorized keys
 
 ```bash
-    # after scp'ing key and changing key file permissions.
-    $ cat ~/key.pub >> ~/.ssh/authorized_keys
-    $ rm -f ~/key.pub
+ # after scp'ing key and changing key file permissions.
+ $ cat ~/key.pub >> ~/.ssh/authorized_keys
+ $ rm -f ~/key.pub
 ```
