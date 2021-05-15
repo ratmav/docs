@@ -17,6 +17,13 @@ ssh
 
 ## local keys
 
+## permissions
+
+* `~/.ssh` (directory): `700 (drwx------)`
+* `~/.ssh/key_name.pub` (public keys): `644 (-rw-r--r--)`
+* `~/.ssh/key_name` (private keys): `600 (-rw-------)`
+* `~/.ssh/authorized_keys` (public keys allowed by server): `644 (-rw-r--r--)`
+ 
 ### generate a keypair
 
 ```bash
