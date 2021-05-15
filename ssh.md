@@ -28,7 +28,7 @@ ssh
 
 ```bash
  $ cd ~/.ssh
- $ ssh-keygen -b 4096 -c "user-name@domain.tld" -f ./username_domain
+ $ ssh-keygen -b 4096 -f ./username_domain
 ```
 
 ### use private keys with non-default names
