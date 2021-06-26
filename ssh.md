@@ -68,9 +68,12 @@ host *
 
 #### start the ssh agent
 
-```
-$ eval "$(ssh-agent -s)"
-```
+* bash: `$ eval "$(ssh-agent -s)"`
+* powershell (needs admin rights):
+   ```powershell
+   > Set-Service -Name ssh-agent -StartupType Automatic
+   > Start-Service ssh-agent
+   ```
 
 #### add key to ssh agent
 
