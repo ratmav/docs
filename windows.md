@@ -9,6 +9,14 @@ most terminal emulators that **aren't** powershell will default to `cmd.exe`, wh
 * `powershell` launches...powershell.
 * `'C:\Program Files\Git\bin\bash.exe'` will launch the bash binary that ships with [Git for Windows](https://gitforwindows.org/).
 
+## powershell permissions
+
+to run scripts written locally, but verify signatures on scripts pulled from remote locations:
+
+```powershell
+Set-ExecutionPolicy RemoteSigned
+```
+
 ## enable natural scrolling
 
 ```powershell
