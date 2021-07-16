@@ -13,11 +13,11 @@ powershell
 
 ## configuration
 
-### profile
+### location
 
-* check if profile exists/locate profile: `TestPath $profile`
+* check if profile exists/locate profile: `Test-Path $profile`
     * **note**: powershell has _six_ possible locations for the flat file; let the shell tell you what it's using.
-* create a new profile if one doesn't exist: `New-Item -Path $Profile -Type File -Force`
+* create a new profile if one doesn't exist: `New-Item -Path $profile -Type File -Force`
 
 ### colors
 
@@ -56,9 +56,11 @@ $Host.PrivateData.ProgressForegroundColor = "DarkCyan"
 #### git bash
 
 ```powershell
-# open git bash in powershell session (v. a new window)
-Set-Alias -Name bash -Value "C:\
+# open git bash in powershell session (v. a new window).
+Set-Alias -Name git-bash -Value "C:\Program Files\Git\bin\bash.exe"
 ```
+
+**note**: the location of `bash.exe` may be be different; salt to taste.
 
 ## tools
 
