@@ -3,18 +3,23 @@ powershell
 
 [documentation](https://docs.microsoft.com/en-us/powershell/)
 
-## setup
-
-[[psscriptanalyzer](https://github.com/PowerShell/PSScriptAnalyzer)
+## installation
 
 ### macos
 
 * install: `brew cask install powershell`
 * start: `pwsh`
-* create profile: `New-Item -Path $Profile -Type File -Force`
-    * profile is written to `$HOME/.config/powershell/Microsoft.PowerShell_profile.ps1`
+* typical profile location: `$HOME/.config/powershell/Microsoft.PowerShell_profile.ps1`
 
-## configure
+## configuration
+
+### profile
+
+* check if profile exists/locate profile: `TestPath $profile`
+    * **note**: powershell has _six_ possible locations for the flat file; let the shell tell you what it's using.
+* create a new profile if one doesn't exist: `New-Item -Path $Profile -Type File -Force`
+
+### colors
 
 powershell terminal and readline colors may conflict with other terminal colorschemes, such as zenburn, solarized, etc. the below snippet should be zenburn-compatible, but at least provides example code for customizing a powershell profile.
 
@@ -46,17 +51,32 @@ $Host.PrivateData.VerboseForegroundColor  = "Gray"
 $Host.PrivateData.ProgressForegroundColor = "DarkCyan"
 ```
 
-## current pipeline item
+### useful aliases
+
+#### git bash
+
+```powershell
+# open git bash in powershell session (v. a new window)
+Set-Alias -Name bash -Value "C:\
+```
+
+## tools
+
+* linter: [psscriptanalyzer](https://github.com/PowerShell/PSScriptAnalyzer)
+
+## use
+
+### current pipeline item
 
 For reference, the `$_` is the same as `$PSItem`, which is a reference to the current item in a powershell pipeline. in addition to the below debugging example, you can access the current item in an iterator in a functional way like so: `1,2,3 | %{ write-host $_ }` or `1,2,3 | %{ write-host $PSItem }`.
 
-## error handling
+### error handling
 
 powershell supports [terminating](https://docs.microsoft.com/en-us/powershell/scripting/developer/cmdlet/terminating-errors?view=powershell-6) and [nonterminating](https://docs.microsoft.com/en-us/powershell/scripting/developer/cmdlet/non-terminating-errors?view=powershell-6) errors. the key difference is that a terminating error will halt execution, where a nonterminating error will simply print an error message and allow execution to continue. use flags such as `-ErrorAction` in order to achieve desired behavior.
 
-## debugging
+### debugging
 
-powershell uses the `Set-PSBreakpoint` cmdlet, which can be run from a `pwsh` interpreter instance:
+powershell uses the `Set-PSBreakpoint` cmdlet:
 
 ```shell
 $ pwsh
