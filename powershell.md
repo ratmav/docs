@@ -68,6 +68,15 @@ Set-Alias -Name git-bash -Value "C:\Program Files\Git\bin\bash.exe"
 
 ## use
 
+### common commands
+
+|bash|powershell|
+|----|----------|
+|`ls`|`Get-ChildItem`|
+|`grep -Rn foo ./`|`Select-String -Path .\* -Pattern foo`|
+|`whoami`|`$env:UserName`|
+|`pwd`|`$pwd`|
+
 ### current pipeline item
 
 For reference, the `$_` is the same as `$PSItem`, which is a reference to the current item in a powershell pipeline. in addition to the below debugging example, you can access the current item in an iterator in a functional way like so: `1,2,3 | %{ write-host $_ }` or `1,2,3 | %{ write-host $PSItem }`.
