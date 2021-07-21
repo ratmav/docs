@@ -78,7 +78,10 @@ Set-Alias -Name git-bash -Value "C:\Program Files\Git\bin\bash.exe"
 |`pwd`|`$pwd`|
 |`cd your/path`|`Set-Location your\path`|
 |`history`|`Get-History`|
-|`sha`, `shasum`, etc.| `Get-FileHash`|
+|`sha`, `shasum`, etc.|`Get-FileHash`|
+|`rm`|`Remove-Item`|
+|`mv`|`Move-Item`|
+|`man`|`Get-Help`|
 
 ### current pipeline item
 
