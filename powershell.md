@@ -84,6 +84,7 @@ Set-Alias -Name git-bash -Value "C:\Program Files\Git\bin\bash.exe"
 |`man`|`Get-Help`|
 |`cp`|`Copy-Item`|
 |`less`, `more`|`Out-Host -paging`|
+|`cat`|`Get-Content`|
 
 ### current pipeline item
 
