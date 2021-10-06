@@ -84,6 +84,8 @@ Set-Alias -Name git-bash -Value "C:\Program Files\Git\bin\bash.exe"
 |`cp`|`Copy-Item`|
 |`less`, `more`|`Out-Host -paging`|
 |`cat`|`Get-Content`|
+|`mkdir`|`New-Item -Path . -Name "foo" -ItemType "directory"|
+|`touch`|`New-Item -Path . -Name "foo" -ItemType "file"|
 
 #### `grep`
 
