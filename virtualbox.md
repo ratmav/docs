@@ -1,6 +1,16 @@
 virtualbox
 ==========
 
+## quirks
+
+## all ssl certificates are expiring
+
+this is probably due to the vm syncing it's clock with host hardware, and running into problems. time sync is an ongoing virtualization issue. the fix here is to just disable guest sync with the host clock:
+
+```bash
+vboxmanage setextradata "vm name" "vboxinternal/devices/vmmdev/0/config/gethosttimedisabled" 1
+```
+
 ## centos guest
 
 **NOTE**: uses [centos stream](https://wiki.centos.org/Manuals/ReleaseNotes/CentOSStream)
