@@ -72,6 +72,7 @@ Set-Alias -Name git-bash -Value "C:\Program Files\Git\bin\bash.exe"
 
 |bash|powershell|
 |----|----------|
+|`clear`|`cls`|
 |`ls`|`Get-ChildItem`|
 |`whoami`|`$env:UserName`|
 |`pwd`|`$pwd`|
