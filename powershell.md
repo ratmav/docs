@@ -70,6 +70,8 @@ Set-Alias -Name git-bash -Value "C:\Program Files\Git\bin\bash.exe"
 
 ## use
 
+**version check**: `$PSVersionTable.PSVersion`
+
 ### common commands
 
 |bash|powershell|
