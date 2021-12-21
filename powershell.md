@@ -100,6 +100,12 @@ Get-ChildItem -Recurse *.* `
   | Select-String -Pattern 'foo' `
   | Select-Object -Unique Path
 ```
+#### `source`
+
+to import functions, etc. from another script, use the dot operator at the top of target script. for example, add `. path\to\source\script.ps1` to the top of the target script to import the script located at path\to\source\script.ps1.
+
+sourcing `.bashrc` (and friends), declaring variables, and calling `unset` is typically how the environment is reloaded in bash. powershell has `refreshenv` to handle all that, which is an alias to `Update-SessionEnvironment`.
+
 ### current pipeline item
 
 For reference, the `$_` is the same as `$PSItem`, which is a reference to the current item in a powershell pipeline. in addition to the below debugging example, you can access the current item in an iterator in a functional way like so: `1,2,3 | %{ write-host $_ }` or `1,2,3 | %{ write-host $PSItem }`.
