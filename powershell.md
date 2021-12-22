@@ -112,6 +112,42 @@ sourcing `.bashrc` (and friends), declaring variables, and calling `unset` is ty
 
 For reference, the `$_` is the same as `$PSItem`, which is a reference to the current item in a powershell pipeline. in addition to the below debugging example, you can access the current item in an iterator in a functional way like so: `1,2,3 | %{ write-host $_ }` or `1,2,3 | %{ write-host $PSItem }`.
 
+### job management
+
+to manage functions as background processes, the following snipped might be useful:
+
+```powershell
+$functions = {
+  # notice that -Bar is the second argument.
+  function wrapper {
+    Param(
+      [string[]] $Foo,
+      [string[]] $Bar
+    )
+
+    Write-Host "${Bar}" # heads up, Write-Host might not be the best call here.
+  }
+}
+
+function main {
+  # notice that -Bar is the first argument.
+  $job = Start-Job `
+    -InitializationScript $functions `
+    -ScriptBlock { wrapper -Bar "oow" -Foo "woo" }
+
+  # wait on all jobs.
+  Get-Job | Wait-Job
+
+  # get output from specific job
+  Receive-Job -Id $job.Id | Write-Host
+
+  # remove all jobs in session.
+  Get-Job | Remove-Job
+}
+
+main
+```
+
 ### error handling
 
 powershell supports [terminating](https://docs.microsoft.com/en-us/powershell/scripting/developer/cmdlet/terminating-errors?view=powershell-6) and [nonterminating](https://docs.microsoft.com/en-us/powershell/scripting/developer/cmdlet/non-terminating-errors?view=powershell-6) errors. the key difference is that a terminating error will halt execution, where a nonterminating error will simply print an error message and allow execution to continue. use flags such as `-ErrorAction` in order to achieve desired behavior.
