@@ -86,7 +86,7 @@ fmt.Printf("%s\n", foo)
 
 ### fp shenanigans
 
-there may or may not be a handy way to hang this on appropriate types (int, maps, etc.), to enable things like:
+**note**: go supports generics in 1.18+
 
 ```go
 var foo []int{1, 2, 3}
