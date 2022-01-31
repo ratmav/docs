@@ -108,6 +108,10 @@ to import functions, etc. from another script, use the dot operator at the top o
 
 sourcing `.bashrc` (and friends), declaring variables, and calling `unset` is typically how the environment is reloaded in bash. powershell has `refreshenv` to handle all that, which is an alias to `Update-SessionEnvironment`.
 
+#### `sudo`
+
+to elevate to an admin shell, which will open in a new window (...), use `Start-Process powershell -Verb RunAs`.
+
 ### current pipeline item
 
 For reference, the `$_` is the same as `$PSItem`, which is a reference to the current item in a powershell pipeline. in addition to the below debugging example, you can access the current item in an iterator in a functional way like so: `1,2,3 | %{ write-host $_ }` or `1,2,3 | %{ write-host $PSItem }`.
@@ -164,3 +168,8 @@ PS /Users/username> Set-PSBreakpoint -Line 221 ./your_script.ps1
 on the next run of `your_script.ps1` from the interpreter, execution will pause at the specified line. To list all breakpoints, use `Get-PSBreakpoint`. To clear a specific breakpoint, use `Remove-PSBreakpoint`. To clear all breakpoints, chain the two: `Get-PSBreakpoint | Remove-PSBreakpoint`.
 
 also, inspecting an object can be done the following way, demonstrated using an `Exception` object found inside a try/catch block: `$_.Exception | Select -Property * `.
+
+### windows subsytem for linux (wsl)
+
+* install: `wsl --install`
+* help: `wsl --help`
