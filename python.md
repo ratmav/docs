@@ -27,17 +27,20 @@ v2
 
 ### autoload virtualenv from script
 
-**note**: works on 2.7 and 3.6
+**note**: works on 3.8
 
 ```python
 #!/usr/bin/env python
 
-
-# force virtualenv.
+# autoload virtualenv.
 import os
+
 directory = os.path.dirname(os.path.abspath(__file__))
-activate = os.path.join(directory, '../.your-project_env/bin/activate_this.py')
-execfile(activate, dict(__file__=activate))
+if os.name == 'nt': # windows
+  activate = os.path.join(directory, '../your-virtual-env-directory/Scripts/activate_this.py')
+else:
+  activate = os.path.join(directory, '../your-virtual-env-directory/bin/activate_this.py')
+execfile(open(activate).read())
 
 # your code here...
 ```
