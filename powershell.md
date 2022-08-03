@@ -53,7 +53,7 @@ $Host.PrivateData.VerboseForegroundColor  = "Gray"
 $Host.PrivateData.ProgressForegroundColor = "DarkCyan"
 ```
 
-### useful aliases
+### aliases
 
 #### git bash
 
@@ -63,6 +63,19 @@ Set-Alias -Name git-bash -Value "C:\Program Files\Git\bin\bash.exe"
 ```
 
 **note**: the location of `bash.exe` may be be different; salt to taste.
+
+#### using arguments with an alias
+
+this is...interesting, but how it seems to work. say you'd like to alias to a command **with arguments** in your profile. a wrapper function is a way to handle this:
+
+```powershell
+function fooBarWrapperFunction {
+  foo -myArg bar
+}
+Set-Alias -Name foo-bar -Value fooBarWrapperFunction
+```
+
+useful when there's a steady reuse of long arguments for a particular shell call.
 
 ## tools
 
@@ -92,6 +105,7 @@ Set-Alias -Name git-bash -Value "C:\Program Files\Git\bin\bash.exe"
 |`mkdir`|`New-Item -Path . -Name "foo" -ItemType "directory"`|
 |`touch`|`New-Item -Path . -Name "foo" -ItemType "file"`|
 |`wget`, `curl`, etc.|`Invoke-WebRequest`|
+|`which`|`(Get-Command foo -ErrorAction “SilentlyContinue”).Path`|
 
 #### `grep`
 
