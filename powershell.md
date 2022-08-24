@@ -124,7 +124,18 @@ sourcing `.bashrc` (and friends), declaring variables, and calling `unset` is ty
 
 #### `sudo`
 
-to elevate to an admin shell, which will open in a new window (...), use `Start-Process powershell -Verb RunAs`.
+to elevate to an interactive admin shell, which will open in a new window (...), use `Start-Process powershell -Verb RunAs`.
+
+to run a command with admin rights as part of a script, use the `-ArgumentList` parameter to force a confimation dialogue, then run the list of arguments in a new subshell (which will exit on completion):
+
+```powershell
+function install_psscriptanalyzer {
+  Start-Process `
+    -FilePath "powershell" `
+    -Verb runAs `
+    -ArgumentList "Install-Module -Name PSScriptAnalyzer -Force"
+}
+```
 
 ### current pipeline item
 
