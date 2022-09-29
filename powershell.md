@@ -13,13 +13,14 @@ powershell
 
 ## configuration
 
-### location
+### management
 
 **note**: powershell has _six_ possible profile locations; let the shell tell you what it's using.
 
 * check if profile exists: `Test-Path $profile`
 * create a new profile if one doesn't exist: `New-Item -Path $profile -Type File -Force`
 * list all profile locations: `$profile | Format-List -Force`
+* open current profile in default editor: `ii $profile`
 
 ### colors
 
