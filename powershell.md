@@ -209,7 +209,34 @@ on the next run of `your_script.ps1` from the interpreter, execution will pause 
 
 also, inspecting an object can be done the following way, demonstrated using an `Exception` object found inside a try/catch block: `$_.Exception | Select -Property * `.
 
-### windows subsytem for linux (wsl)
+### metaprogramming
+
+powershell supports using anonymous functions as well as strings via `New-Item` and the `function:` drive for some light reflection:
+
+```powershell
+function dynamicFunction {
+  $name = 'foo'
+
+  # can't pass in parameter to anonymous function; outputs empty string.
+  $parametrizedMessage = 'bar'
+  $code = { param($pm) Write-Host -ForegroundColor Yellow $pm }
+  $null = New-Item `
+    -Force
+    -Path function: `
+      -Name "script:anonymous-$name" `
+      -Value $code
+
+  # can *set* parameter via string interpolation; outputs "baz."
+  $interpolatedMessage = 'baz'
+  $null = New-Item `
+    -Force `
+    -Path function: `
+      -Name "script:interpolated-$name" `
+      -Value "Write-Host -ForegroundColor Yellow '$interpolatedMessage`"
+}
+```
+
+## windows subsytem for linux (wsl)
 
 * install: `wsl --install`
 * help: `wsl --help`
