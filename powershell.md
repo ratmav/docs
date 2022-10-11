@@ -13,7 +13,15 @@ powershell
 
 ## configuration
 
-### management
+### permissions
+
+to run scripts written locally, but verify signatures on scripts pulled from remote locations:
+
+```powershell
+Set-ExecutionPolicy RemoteSigned
+```
+
+### profile
 
 **note**: powershell has _six_ possible profile locations; let the shell tell you what it's using.
 
@@ -56,7 +64,13 @@ $Host.PrivateData.ProgressForegroundColor = "DarkCyan"
 
 ### aliases
 
-#### git bash
+#### shell hopping
+
+most terminal emulators that **aren't** powershell will default to `cmd.exe`, which can be used to launch various tui shells that are installed:
+
+* `bash` usually launches the bash binary that ships with wsl 2 that is installed as part of the docker desktop installation.
+* `powershell` launches...powershell.
+* `'C:\Program Files\Git\bin\bash.exe'` will launch the bash binary that ships with [Git for Windows](https://gitforwindows.org/).
 
 ```powershell
 # open git bash in powershell session (v. a new window).
@@ -84,7 +98,7 @@ useful when there's a steady reuse of long arguments for a particular shell call
 
 ## use
 
-**version check**: `$PSVersionTable.PSVersion`
+**version check**: `$PSVersionTable.PSVersion` or `$host.Version`.
 
 ### common commands
 

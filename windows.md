@@ -1,22 +1,6 @@
 windows
 =======
 
-## shell swapping
-
-most terminal emulators that **aren't** powershell will default to `cmd.exe`, which can be used to launch various tui shells that are installed:
-
-* `bash` usually launches the bash binary that ships with wsl 2 that is installed as part of the docker desktop installation.
-* `powershell` launches...powershell.
-* `'C:\Program Files\Git\bin\bash.exe'` will launch the bash binary that ships with [Git for Windows](https://gitforwindows.org/).
-
-## powershell permissions
-
-to run scripts written locally, but verify signatures on scripts pulled from remote locations:
-
-```powershell
-Set-ExecutionPolicy RemoteSigned
-```
-
 ## enable natural scrolling
 
 ```powershell
