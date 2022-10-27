@@ -94,7 +94,8 @@ useful when there's a steady reuse of long arguments for a particular shell call
 
 ## tools
 
-* linter: [psscriptanalyzer](https://github.com/PowerShell/PSScriptAnalyzer)
+* linting: [psscriptanalyzer](https://github.com/PowerShell/PSScriptAnalyzer)
+* testing: [pester](https://github.com/pester/Pester)
 
 ## use
 
