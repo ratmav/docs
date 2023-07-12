@@ -31,6 +31,7 @@ updated as i come across new information; ymmv.
 * [the observatory of economic complexity](https://oec.world/)
 * [open source security index](https://opensourcesecurityindex.io/)
 * [open souce vulnerability database](https://osv.dev/)
+* [organization for economic cooperation and development](https://www.oecd.org/)
 * [shodan](https://www.shodan.io/)
 * [us bureau of labor statistics](https://www.bls.gov/home.htm?view_full)
 * [the veronica open incident database](https://www.thevoid.community/)
