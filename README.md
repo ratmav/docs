@@ -20,6 +20,7 @@ updated as i come across new information; ymmv.
 
 * [4g lte coverage](https://fcc.maps.arcgis.com/apps/webappviewer/index.html?id=6c1b2e73d9d749cdb7bc88a0d1bdd25b)
 * [the american customer satifaction index](https://www.theacsi.org/)
+* [bureau of economic analysis](https://www.bea.gov/tools)
 * [bureau of transportation statistics](https://www.bts.gov/)
 * [consumer financial protection bureau](https://www.consumerfinance.gov/data-research/)
 * [cve search](https://cve.mitre.org/cve/search_cve_list.html)
