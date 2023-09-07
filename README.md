@@ -36,6 +36,7 @@ updated as i come across new information; ymmv.
 * [security and exchange commision search (edgar)](https://www.sec.gov/edgar/search/https://www.sec.gov/edgar/search/)
 * [shodan](https://www.shodan.io/)
 * [us bureau of labor statistics](https://www.bls.gov/home.htm?view_full)
+* [usda economic research service](https://www.ers.usda.gov/)
 * [the veronica open incident database](https://www.thevoid.community/)
 
 ### docs
