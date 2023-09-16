@@ -42,6 +42,7 @@ updated as i come across new information; ymmv.
 ### docs
 
 * [bash](https://www.gnu.org/software/bash/manual/bash.html)
+* [cisco](https://www.cisco.com/c/en/us/support/index.html)
 * [(c)ybersecurity (l)abs (a)nd (r)esearch (k)nowledgebase](https://clark.center/home)
 * [ghidra cheat sheet](https://htmlpreview.github.io/?https://github.com/NationalSecurityAgency/ghidra/blob/stable/GhidraDocs/CheatSheet.html)
 * [gdb](https://ftp.gnu.org/old-gnu/Manuals/gdb/html_chapter/gdb_toc.html)
@@ -50,6 +51,7 @@ updated as i come across new information; ymmv.
 * [arch](https://wiki.archlinux.org/)
 * [kali](https://www.kali.org/docs/)
 * [lldb](https://lldb.llvm.org/)
+* [palo alto](https://docs.paloaltonetworks.com)
 * [powershell](https://learn.microsoft.com/en-us/powershell/)
 * [python](https://docs.python.org/3/)
 * [windbg](https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/getting-started-with-windows-debugging)
@@ -99,7 +101,9 @@ updated as i come across new information; ymmv.
 * [cyber chef](https://gchq.github.io/CyberChef/)
 * [jsonlint](https://jsonlint.com/)
 * [openverse](https://wordpress.org/openverse/?referrer=creativecommons.orga)
+* [rosetta code](https://www.rosettacode.org/wiki/Rosetta_Code)
 * [strftime](https://strftime.timpetricola.com/)
 * [regex101](https://regex101.com/)
 * [unpacme](https://www.unpac.me/#/)
 * [virustotal](https://www.virustotal.com/gui/home/upload)
+* [wikifunctions](https://www.wikifunctions.org/wiki/Wikifunctions:Main_Page)
