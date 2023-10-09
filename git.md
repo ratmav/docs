@@ -191,6 +191,34 @@ $ cd project-name
 $ git branch -d branch-name
 ```
 
+##### delete local branches with no remote
+
+**note**: useful for cleaning up when branches are deleted by cicd after merging downstream.
+
+```bash
+# handy function to drop in .bashrc/_profile/wherever.
+git-prune-sync() {
+  if [ "$(type -P git)" ]; then
+    git remote prune origin
+
+    if git rev-parse --git-dir > /dev/null 2>&1; then
+      branch_name=$(git branch -vv | grep "gone" | aws '{print $1}')
+
+      if [[ -z "$branch_name" ]]; then
+        echo "remove references and local remote-tracking branches are in sync."
+      else
+        echo $branch_name | xargs git branch -D
+        echo "pruned remote references and deleted local remote-tracking branches."
+      fi
+    else
+      echo "not a git repository."
+    fi
+  else
+    echo "'git' command not available. check your installation."
+  fi
+}
+```
+
 #### remove files from repo and history
 
 ##### most recent commit
