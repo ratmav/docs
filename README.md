@@ -100,6 +100,7 @@ updated as i come across new information; ymmv.
 * [cuckoo sandbox](https://malwr.ee/)
 * [cyber chef](https://gchq.github.io/CyberChef/)
 * [jsonlint](https://jsonlint.com/)
+* [mozilla observatory](https://observatory.mozilla.org/)
 * [openverse](https://wordpress.org/openverse/?referrer=creativecommons.orga)
 * [rosetta code](https://www.rosettacode.org/wiki/Rosetta_Code)
 * [strftime](https://strftime.timpetricola.com/)
