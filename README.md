@@ -102,6 +102,7 @@ updated as i come across new information; ymmv.
 * [jsonlint](https://jsonlint.com/)
 * [mozilla observatory](https://observatory.mozilla.org/)
 * [openverse](https://wordpress.org/openverse/?referrer=creativecommons.orga)
+* [quick database diagrams](https://app.quickdatabasediagrams.com/#/)
 * [rosetta code](https://www.rosettacode.org/wiki/Rosetta_Code)
 * [strftime](https://strftime.timpetricola.com/)
 * [regex101](https://regex101.com/)
