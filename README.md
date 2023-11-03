@@ -49,7 +49,6 @@ updated as i come across new information; ymmv.
 * [gdb](https://ftp.gnu.org/old-gnu/Manuals/gdb/html_chapter/gdb_toc.html)
 * [git book](https://git-scm.com/book/)
 * [gns3](https://docs.gns3.com/docs/)
-* [arch](https://wiki.archlinux.org/)
 * [kali](https://www.kali.org/docs/)
 * [lldb](https://lldb.llvm.org/)
 * [palo alto](https://docs.paloaltonetworks.com)
