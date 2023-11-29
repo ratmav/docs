@@ -54,3 +54,6 @@ echo '{"foo": "lorem", "bar": "ipsum"}' | python -m json.tool # directly on cli
 python -m json.tool my_json.json # json in file.
 ```
 
+### force pip to use a virtualenv
+
+`export PIP_REQUIRE_VIRTUALENV=true` in shell config.
