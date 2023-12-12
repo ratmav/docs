@@ -30,6 +30,7 @@ updated as i come across new information; ymmv.
 * [exploit database](https://www.exploit-db.com/)
 * [fear and greed index](https://www.cnn.com/markets/fear-and-greed)
 * [national weather service](https://www.weather.gov/)
+* [national center for education statistics](https://nces.ed.gov/datatools/)
 * [the observatory of economic complexity](https://oec.world/)
 * [open source security index](https://opensourcesecurityindex.io/)
 * [open souce vulnerability database](https://osv.dev/)
