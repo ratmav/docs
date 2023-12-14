@@ -34,6 +34,7 @@ updated as i come across new information; ymmv.
 * [the observatory of economic complexity](https://oec.world/)
 * [open source security index](https://opensourcesecurityindex.io/)
 * [open souce vulnerability database](https://osv.dev/)
+* [openweather](https://openweathermap.org/)
 * [organization for economic cooperation and development](https://www.oecd.org/)
 * [security and exchange commision search (edgar)](https://www.sec.gov/edgar/search/https://www.sec.gov/edgar/search/)
 * [shodan](https://www.shodan.io/)
