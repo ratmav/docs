@@ -20,6 +20,7 @@ updated as i come across new information; ymmv.
 ### data
 
 * [4g lte coverage](https://fcc.maps.arcgis.com/apps/webappviewer/index.html?id=6c1b2e73d9d749cdb7bc88a0d1bdd25b)
+* [adp employment report](https://adpemploymentreport.com/)
 * [the american customer satifaction index](https://www.theacsi.org/)
 * [bureau of economic analysis](https://www.bea.gov/tools)
 * [bureau of transportation statistics](https://www.bts.gov/)
