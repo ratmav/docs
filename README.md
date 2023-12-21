@@ -25,6 +25,7 @@ updated as i come across new information; ymmv.
 * [bureau of economic analysis](https://www.bea.gov/tools)
 * [bureau of transportation statistics](https://www.bts.gov/)
 * [consumer financial protection bureau](https://www.consumerfinance.gov/data-research/)
+* [core logic intelligence](https://www.corelogic.com/intelligence/)
 * [cve search](https://cve.mitre.org/cve/search_cve_list.html)
 * [cwe search](https://cwe.mitre.org/)
 * [data.gov](https://data.gov/)
