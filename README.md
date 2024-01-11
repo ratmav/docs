@@ -20,6 +20,7 @@ updated as i come across new information; ymmv.
 ### data
 
 * [4g lte coverage](https://fcc.maps.arcgis.com/apps/webappviewer/index.html?id=6c1b2e73d9d749cdb7bc88a0d1bdd25b)
+* [aaii investor sentiment survey](https://www.aaii.com/sentimentsurvey)
 * [adp employment report](https://adpemploymentreport.com/)
 * [the american customer satifaction index](https://www.theacsi.org/)
 * [bureau of economic analysis](https://www.bea.gov/tools)
@@ -105,6 +106,8 @@ updated as i come across new information; ymmv.
 * [cyber chef](https://gchq.github.io/CyberChef/)
 * [jsonlint](https://jsonlint.com/)
 * [mozilla observatory](https://observatory.mozilla.org/)
+* [mozilla monitor](https://monitor.mozilla.org/)
+* [nomoreransom](https://www.nomoreransom.org/en/decryption-tools.html)
 * [openverse](https://wordpress.org/openverse/?referrer=creativecommons.orga)
 * [quick database diagrams](https://app.quickdatabasediagrams.com/#/)
 * [rosetta code](https://www.rosettacode.org/wiki/Rosetta_Code)
