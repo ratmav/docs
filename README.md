@@ -39,6 +39,7 @@ updated as i come across new information; ymmv.
 * [open souce vulnerability database](https://osv.dev/)
 * [openweather](https://openweathermap.org/)
 * [organization for economic cooperation and development](https://www.oecd.org/)
+* [pacer (us federal case search)](https://pacer.uscourts.gov/)
 * [security and exchange commision search (edgar)](https://www.sec.gov/edgar/search/)
 * [shodan](https://www.shodan.io/)
 * [us bureau of labor statistics](https://www.bls.gov/home.htm?view_full)
