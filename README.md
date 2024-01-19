@@ -32,6 +32,7 @@ updated as i come across new information; ymmv.
 * [data.gov](https://data.gov/)
 * [exploit database](https://www.exploit-db.com/)
 * [fear and greed index](https://www.cnn.com/markets/fear-and-greed)
+* [federal communications commission](https://www.fcc.gov/reports-research/data)
 * [national weather service](https://www.weather.gov/)
 * [national center for education statistics](https://nces.ed.gov/datatools/)
 * [the observatory of economic complexity](https://oec.world/)
