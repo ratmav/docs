@@ -30,6 +30,7 @@ updated as i come across new information; ymmv.
 * [cve search](https://cve.mitre.org/cve/search_cve_list.html)
 * [cwe search](https://cwe.mitre.org/)
 * [data.gov](https://data.gov/)
+* [eff atlas of surveillance](https://atlasofsurveillance.org/atlas)
 * [exploit database](https://www.exploit-db.com/)
 * [fear and greed index](https://www.cnn.com/markets/fear-and-greed)
 * [federal communications commission](https://www.fcc.gov/reports-research/)
