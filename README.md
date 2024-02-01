@@ -15,6 +15,7 @@ updated as i come across new information; ymmv.
 * [owasp](https://owasp.org/news/)
 * [phrack](http://phrack.org/)
 * [poc || gtfo](https://www.alchemistowl.org/pocorgtfo/)
+* [the dry principle](https://www.artima.com/articles/orthogonality-and-the-dry-principle)
 * [vx undergraound](https://www.vx-underground.org/#)
 
 ### data
