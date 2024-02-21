@@ -121,3 +121,4 @@ updated as i come across new information; ymmv.
 * [unpacme](https://www.unpac.me/#/)
 * [virustotal](https://www.virustotal.com/gui/home/upload)
 * [wikifunctions](https://www.wikifunctions.org/wiki/Wikifunctions:Main_Page)
+* [ascii smuggler](https://embracethered.com/blog/ascii-smuggler.html)
