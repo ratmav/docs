@@ -16,7 +16,7 @@ miscellaneous
 | 4                   | application       | ***a***nonymous        | 6                | presentation   | ***p***lanes        | data                     | typically encryption/decryption and serialization*                                             |
 | 4                   | application       | ***a***nonymous        | 5                | session        | ***s***eem          | data                     | typically session management*                                                                  |
 | 3                   | transport         | ***t***urtles          | 4                | transport      | ***t***o            | segment, datagram        | segmentation, acknowledgement, and multiplexing (tcp, udp)                                     |
-| 2                   | internet          | ***i***nspect          | 3                | network        | ***n**eed           | packet                   | addressing, routing, traffic control (ip, icmp, arp)                                           |
+| 2                   | internet          | ***i***nspect          | 3                | network        | ***n***eed          | packet                   | addressing, routing, traffic control (ip, icmp, arp)                                           |
 | 1                   | link              | ***l***ightbulbs       | 2                | data Link      | ***d***aring        | frame                    | transmitting frames between physically connected nodes (mac, ppp, ieee 802.2 ethernet framing) |
 | 1                   | link              | ***l***ightbulbs       | 1                | physical       | ***p***ilots        | bit, symbol              | transmission and reception of raw bit streams over physical media (twisted pair, coax, fiber)  |
 
