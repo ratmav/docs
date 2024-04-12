@@ -6,7 +6,7 @@ miscellaneous
 ### tcp/ip and osi models
 
 * tcp/ip mnemonic: "***a***nonymous ***t***urtles ***i***nspect ***l***ightbulbs"
-* osi mnemonic:    "***a***erodyanmic ***p***lanes ***s***eem ***t***o ***n**eed ***d***aring ***p***ilots"
+* osi mnemonic:    "***a***erodyanmic ***p***lanes ***s***eem ***t***o ***n***eed ***d***aring ***p***ilots"
 
 #### comparison table
 
