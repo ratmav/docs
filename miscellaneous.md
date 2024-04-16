@@ -1,27 +1,6 @@
 miscellaneous
 =============
 
-## networking
-
-### tcp/ip and osi models
-
-* tcp/ip mnemonic: "***a***nonymous ***t***urtles ***i***nspect ***l***ightbulbs"
-* osi mnemonic:    "***a***erodyanmic ***p***lanes ***s***eem ***t***o ***n***eed ***d***aring ***p***ilots"
-
-#### comparison table
-
-| tcp/ip layer number | tcp/ip layer name | tcp/ip mnemonic phrase | osi layer number | osi layer name | osi mnemonic phrase | protocol data unit (pdu) | use
-|---------------------|-------------------|------------------------|------------------|----------------|---------------------|--------------------------|-----------------------------------------------------------------------------------------------------           |
-| 4                   | application       | ***a***nonymous        | 7                | application    | ***a***erodyanmic   | data                     | https, ssh, ntp, ftp, dns, etc.                                                                                |
-| 4                   | application       | ***a***nonymous        | 6                | presentation   | ***p***lanes        | data                     | typically encryption/decryption and serialization (jpeg, gif, tiff, mpeg, etc.).*                              |
-| 4                   | application       | ***a***nonymous        | 5                | session        | ***s***eem          | data                     | typically session management (nfs, rpc, sql).*                                                                 |
-| 3                   | transport         | ***t***urtles          | 4                | transport      | ***t***o            | segment, datagram        | segmentation, acknowledgement, and multiplexing (tcp, udp)                                                     |
-| 2                   | internet          | ***i***nspect          | 3                | network        | ***n***eed          | packet                   | addressing, routing, traffic control (ip, icmp, arp)                                                           |
-| 1                   | link              | ***l***ightbulbs       | 2                | data Link      | ***d***aring        | frame                    | transmitting frames between physically connected nodes (arp, mac, ppp, ieee 802.2 ethernet framing)            |
-| 1                   | link              | ***l***ightbulbs       | 1                | physical       | ***p***ilots        | bit, symbol              | transmission and reception of raw bit streams over physical media (hubs, bluetooth, twisted pair, coax, fiber) |
-
-*data handling protocols may overlap at the osi application, presentation, and session layers, for example https, tls, etc. because the osi model is a reference/logical model.
-
 ## operating systems
 
 ### *nix
