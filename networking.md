@@ -20,3 +20,36 @@ networking
 
 *data handling protocols may overlap at the osi application, presentation, and session layers, for example https, tls, etc. because the osi model is a reference/logical model.
 
+## topologies
+
+* ring
+* point to point
+* mesh
+* star
+* hybrid (mix of other topologies)
+* bus
+* tree
+
+## cardinality
+
+* north:     traffic exiting the data center
+* south:     traffic entering the data center
+* east/west: inter-device traffic within the data center
+
+## ipv4 and ipv6
+
+### addressing schemes
+
+ip v4: 192.168.2.14:80 -> 192.168.2    .14       :443
+                          (network id) (host id) (port)
+
+ip v6: [2001:0db8:3a4d:0016:0000:0000:1c2f:1a2b]:443 -> [2001:0db8:3a4d: 0016:       0000:0000:1c2f:1a2b] :443
+                                                         (site prefix)   (subnet id) (interface id)       (port)
+
+### ipv4 classed networks
+
+out of the 4 available ipv4 octets:
+
+* class a: the first octet is determined by the network, and the remaining three octets are available to assign to hosts.
+* class b: the first and second octets are determined by the network, and the remaining two octets are left to assign to hosts.
+* class c: the first, second, and third octets are determined by the network, and the octet is left to assign to hosts.
