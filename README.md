@@ -12,7 +12,7 @@ updated as i come across new information; ymmv.
 * [cult of the dead cow](https://cultdeadcow.com/)
 * [fix it twice](https://www.expatsoftware.com/Articles/guy-on-the-beach-with-a-laptop.html)
 * [google's sre series](https://sre.google/books/)
-* [owasp](https://owasp.org/news/)
+* [owasp cheat sheet series](https://cheatsheetseries.owasp.org/)
 * [phrack](http://phrack.org/)
 * [poc || gtfo](https://www.alchemistowl.org/pocorgtfo/)
 * [the dry principle](https://www.artima.com/articles/orthogonality-and-the-dry-principle)
@@ -77,6 +77,7 @@ updated as i come across new information; ymmv.
 * [aws](https://docs.aws.amazon.com/)
 * [azure](https://docs.microsoft.com/en-us/azure/?product=popular)
 * [gcp](https://cloud.google.com/docs/)
+* [hacking the cloud](https://hackingthe.cloud/)
 
 ##### iac
 
