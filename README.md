@@ -8,10 +8,12 @@ updated as i come across new information; ymmv.
 ## links
 
 * [12 factor principles](https://12factor.net/)
+* [appsec guide (tob testing handbook)](https://appsec.guide/)
 * [cia and die](https://www.rsaconference.com/Library/presentation/USA/2021/death-to-cia-long-live-die-how-the-die-triad-helps-us-achieve-resiliency)
 * [cult of the dead cow](https://cultdeadcow.com/)
 * [fix it twice](https://www.expatsoftware.com/Articles/guy-on-the-beach-with-a-laptop.html)
 * [google's sre series](https://sre.google/books/)
+* [hacking the cloud](https://hackingthe.cloud/)
 * [owasp cheat sheet series](https://cheatsheetseries.owasp.org/)
 * [phrack](http://phrack.org/)
 * [poc || gtfo](https://www.alchemistowl.org/pocorgtfo/)
@@ -77,7 +79,6 @@ updated as i come across new information; ymmv.
 * [aws](https://docs.aws.amazon.com/)
 * [azure](https://docs.microsoft.com/en-us/azure/?product=popular)
 * [gcp](https://cloud.google.com/docs/)
-* [hacking the cloud](https://hackingthe.cloud/)
 
 ##### iac
 
