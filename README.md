@@ -14,6 +14,7 @@ updated as i come across new information; ymmv.
 * [fix it twice](https://www.expatsoftware.com/Articles/guy-on-the-beach-with-a-laptop.html)
 * [google's sre series](https://sre.google/books/)
 * [hacking the cloud](https://hackingthe.cloud/)
+* [offensive ml playbook](https://wiki.offsecml.com/Welcome+to+the+Offensive+ML+Playbook)
 * [owasp cheat sheet series](https://cheatsheetseries.owasp.org/)
 * [phrack](http://phrack.org/)
 * [poc || gtfo](https://www.alchemistowl.org/pocorgtfo/)
@@ -103,7 +104,7 @@ updated as i come across new information; ymmv.
 ### wrench
 
 * [8086 emulator](https://yjdoc2.github.io/8086-emulator-web/compile)
-* [oaksim (prototype arm emulator)](https://wunkolo.github.io/OakSim/)
+* [ascii smuggler](https://embracethered.com/blog/ascii-smuggler.html)
 * [blacklight](https://themarkup.org/blacklight)
 * [compiler explorer (godbolt)](https://godbolt.org/)
 * [cover your tracks](https://coveryourtracks.eff.org/)
@@ -114,6 +115,7 @@ updated as i come across new information; ymmv.
 * [mozilla observatory](https://observatory.mozilla.org/)
 * [mozilla monitor](https://monitor.mozilla.org/)
 * [nomoreransom](https://www.nomoreransom.org/en/decryption-tools.html)
+* [oaksim (prototype arm emulator)](https://wunkolo.github.io/OakSim/)
 * [openverse](https://wordpress.org/openverse/?referrer=creativecommons.orga)
 * [quick database diagrams](https://app.quickdatabasediagrams.com/#/)
 * [rosetta code](https://www.rosettacode.org/wiki/Rosetta_Code)
@@ -123,4 +125,3 @@ updated as i come across new information; ymmv.
 * [unpacme](https://www.unpac.me/#/)
 * [virustotal](https://www.virustotal.com/gui/home/upload)
 * [wikifunctions](https://www.wikifunctions.org/wiki/Wikifunctions:Main_Page)
-* [ascii smuggler](https://embracethered.com/blog/ascii-smuggler.html)
