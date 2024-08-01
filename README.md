@@ -11,6 +11,7 @@ updated as i come across new information; ymmv.
 * [appsec guide (tob testing handbook)](https://appsec.guide/)
 * [cia and die](https://www.rsaconference.com/Library/presentation/USA/2021/death-to-cia-long-live-die-how-the-die-triad-helps-us-achieve-resiliency)
 * [cult of the dead cow](https://cultdeadcow.com/)
+* [cvss specification](https://www.first.org/cvss/specification-document)
 * [fix it twice](https://www.expatsoftware.com/Articles/guy-on-the-beach-with-a-laptop.html)
 * [google's sre series](https://sre.google/books/)
 * [hacking the cloud](https://hackingthe.cloud/)
