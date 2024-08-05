@@ -115,6 +115,7 @@ updated as i come across new information; ymmv.
 * [jsonlint](https://jsonlint.com/)
 * [mozilla observatory](https://observatory.mozilla.org/)
 * [mozilla monitor](https://monitor.mozilla.org/)
+* [mxtoolbox](https://mxtoolbox.com/SuperTool.aspx)
 * [nomoreransom](https://www.nomoreransom.org/en/decryption-tools.html)
 * [oaksim (prototype arm emulator)](https://wunkolo.github.io/OakSim/)
 * [openverse](https://wordpress.org/openverse/?referrer=creativecommons.orga)
