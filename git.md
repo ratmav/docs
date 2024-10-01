@@ -244,3 +244,11 @@ $ git push --force
 $ git reset --hard head~1
 $ git push -f <remote> <branch>
 ```
+
+#### squash last n commits via interactive rebase
+
+```
+$ git log # find the sha of the n-1 commit.
+$ git rebase -i <sha of n-1 commit/> # note: will open vim, so if you're in vim already use fugitive.
+# use the editor (vim) to squash (and possibly reword) commits.
+```
