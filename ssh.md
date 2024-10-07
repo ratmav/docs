@@ -62,6 +62,13 @@ host *
   identitiesonly yes
 ```
 
+***note***: if you're on macos and want to use the keychain to store your passphrase, you'll need something similar to the following in your ssh config:
+
+```
+host *
+  UseKeychain yes
+```
+
 ### configure local ssh agent
 
 **note**: be sure that the key is added/configured in the `~/.ssh/config` file!
