@@ -42,6 +42,7 @@ updated as i come across new information; ymmv.
 * [federal communications commission](https://www.fcc.gov/reports-research/)
 * [national weather service](https://www.weather.gov/)
 * [national center for education statistics](https://nces.ed.gov/datatools/)
+* [noaa](https://www.noaa.gov/)
 * [openpayments](https://openpaymentsdata.cms.gov/)
 * [openweather](https://openweathermap.org/)
 * [the observatory of economic complexity](https://oec.world/)
