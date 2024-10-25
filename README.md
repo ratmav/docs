@@ -109,6 +109,7 @@ updated as i come across new information; ymmv.
 * [8086 emulator](https://yjdoc2.github.io/8086-emulator-web/compile)
 * [ascii smuggler](https://embracethered.com/blog/ascii-smuggler.html)
 * [blacklight](https://themarkup.org/blacklight)
+* [capa explorer](https://mandiant.github.io/capa/explorer/#/)
 * [compiler explorer (godbolt)](https://godbolt.org/)
 * [cover your tracks](https://coveryourtracks.eff.org/)
 * [crontab.guru](https://crontab.guru/)
