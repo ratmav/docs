@@ -1,6 +1,10 @@
 windows
 =======
 
+## rdp pki on aws
+
+[on aws, windows ami's do not support ed25510 keys.](https://github.com/aws/aws-cli/discussions/7074)
+
 ## enable natural scrolling
 
 ```powershell
