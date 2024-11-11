@@ -11,7 +11,14 @@ windows
 ### user data scripts
 
 * can't use `Start-BitsTransfer` in an user data script, because `Start-BitsTransfer` doesn't wait for the network connection to come up.
-    * have to use `Invoke-WebRequest` or `System.Net.Webclient` instead.
+    * have to use `Invoke-WebRequest` or `System.Net.Webclient` (faster) instead.
+* for some reason, powershell user data scripts have to get wrapped in tags (bash scripts do not). example:
+
+    ```powershell
+    <powershell>
+    Write-Host "why?"
+    </powershell>
+    ```
 
 ## enable natural scrolling
 
