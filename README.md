@@ -28,6 +28,7 @@ updated as i come across new information; ymmv.
 * [aaii investor sentiment survey](https://www.aaii.com/sentimentsurvey)
 * [adp employment report](https://adpemploymentreport.com/)
 * [the american customer satifaction index](https://www.theacsi.org/)
+* [bcattools](https://bellingcat.gitbook.io/toolkit)
 * [bureau of economic analysis](https://www.bea.gov/tools)
 * [bureau of labor statistics](https://www.bls.gov/home.htm?view_full)
 * [bureau of transportation statistics](https://www.bts.gov/)
