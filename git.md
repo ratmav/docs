@@ -198,17 +198,25 @@ $ git branch -d branch-name
 ```bash
 # handy function to drop in .bashrc/_profile/wherever.
 git-prune-sync() {
+  if [ $# -eq 0 ]; then
+    local remote=origin
+  else
+    local remote=$1
+  fi
+
   if [ "$(type -P git)" ]; then
-    git remote prune origin
+    git remote prune "$remote"
+    echo "pruned $remote branch references."
 
     if git rev-parse --git-dir > /dev/null 2>&1; then
-      branch_name=$(git branch -vv | grep "gone" | aws '{print $1}')
+      gone_remote_branches=$(git branch -vv | grep "gone" | awk "{print \$1}")
 
-      if [[ -z "$branch_name" ]]; then
-        echo "remove references and local remote-tracking branches are in sync."
+      if [[ -z "$gone_remote_branches" ]]; then
+        echo "no local branches track a gone $remote branch."
       else
-        echo $branch_name | xargs git branch -D
-        echo "pruned remote references and deleted local remote-tracking branches."
+        for gone_remote_branch in $gone_remote_branches; do
+          echo "$gone_remote_branch" | xargs git branch -D
+        done
       fi
     else
       echo "not a git repository."

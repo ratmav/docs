@@ -116,6 +116,7 @@ updated as i come across new information; ymmv.
 * [crontab.guru](https://crontab.guru/)
 * [cuckoo sandbox](https://malwr.ee/)
 * [cyber chef](https://gchq.github.io/CyberChef/)
+* [icanhazip](https://icanhazip.com/)
 * [jsonlint](https://jsonlint.com/)
 * [mozilla observatory](https://observatory.mozilla.org/)
 * [mozilla monitor](https://monitor.mozilla.org/)
