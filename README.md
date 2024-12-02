@@ -52,6 +52,7 @@ updated as i come across new information; ymmv.
 * [pacer (us federal case search)](https://pacer.uscourts.gov/)
 * [security and exchange commision search (edgar)](https://www.sec.gov/edgar/search/)
 * [shodan](https://www.shodan.io/)
+* [us census bureau](https://www.census.gov/data.html)
 * [usda economic research service](https://www.ers.usda.gov/)
 * [the veronica open incident database](https://www.thevoid.community/)
 
