@@ -1,5 +1,4 @@
-git
-===
+# git
 
 [documentation](https://git-scm.com/doc)
 
@@ -101,7 +100,7 @@ $ cd project-name
 $ git workprofile
 ```
 
-### local repository management
+### local working copy management
 
 #### create local repository
 
@@ -117,7 +116,7 @@ $ git commit -m “initial commit"
 ```bash
 $ cd project-name
 $ git remote add origin ssh://git@your.domain.name/home/git/repositories/project-name.git
-$ git push origin master
+$ git push origin main
 ```
 
 #### create branch
@@ -126,7 +125,7 @@ $ git push origin master
 $ cd project-name
 $ git checkout -b branch-name
 $ git push -u origin branch-name
-$ git branch --set-upstream-to=origin/branch-name
+$ git branch --set-upstream-to=origin/branch-name # or set push.autosetupremote=true in your git config.
 ```
 
 #### sync branch with `master`
@@ -155,12 +154,14 @@ $ git checkout branch-name # the branch you care about.
 $ git pull
 $ git rebase master
 $ git diff # confirm expected changes, resolve conflicts, etc.
-$ git push origin branch-name --force
+$ git push origin branch-name --force-with-lease
 ```
 
-###### a note on `--force`
+###### a note on `--force` v. `--force-with-lease`
 
 typically, `rebase` is used to groom git logs so those logs provide a more meainingful history of work on the project. this means that history is typically overwritten on a rebase, which means that a local working copy is going to diverge from the remote. in that case, `--force` is required to overwrite the history on the remote to match the local working copy. this introduces a smaller margin for error, so measure twice and cut once.
+
+`--force-with-lease` will check for commits that are on the remote but missing in the local working copy, and fail if there are missing commits. this is much safer. use `--force` only when absolutely required.
 
 #### merging branch to `master`
 
@@ -234,14 +235,14 @@ git-prune-sync() {
 ```
 $ git rm --cached file_or_dir
 $ git commit --amend -chead
-$ git push --force
+$ git push --force-with-lease
 ```
 
 ##### all commits
 
 ```
 $ git filter-branch --tree-filter "rm -rf file_or_dir"
-$ git push --force
+$ git push --force-with-lease
 ```
 
 #### undo commit
@@ -259,4 +260,7 @@ $ git push -f <remote> <branch>
 $ git log # find the sha of the n-1 commit.
 $ git rebase -i <sha of n-1 commit/> # note: will open vim, so if you're in vim already use fugitive.
 # use the editor (vim) to squash (and possibly reword) commits.
+# if you're running a terminal inside vim (or neovim), be careful to avoid
+# "vimception," i.e. running vim inside of a vim terminal emulator.
+$ git push --force-with-lease
 ```
