@@ -7,6 +7,7 @@ updated as i come across new information; ymmv.
 
 ## links
 
+* [the optimal amount of fraud is nonzero](https://www.bitsaboutmoney.com/archive/optimal-amount-of-fraud/)
 * [12 factor principles](https://12factor.net/)
 * [appsec guide (tob testing handbook)](https://appsec.guide/)
 * [cia and die](https://www.rsaconference.com/Library/presentation/USA/2021/death-to-cia-long-live-die-how-the-die-triad-helps-us-achieve-resiliency)
