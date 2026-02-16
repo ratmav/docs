@@ -17,9 +17,17 @@ your-user ALL=(ALL) NOPASSWD: ALL
 
 #### remapping capslock
 
-in the `/etc/default/keyboard` (debian) file, set `XKBOPTIONS`:
+system-wide approach - in the `/etc/default/keyboard` (debian) file, set `XKBOPTIONS`:
     * `="ctrl:swapcaps"` (swaps capslock and ctrl).
     * `="ctrl:nocaps"` (capslock becomes an _additional_ ctrl)
+
+xfce/x session approach - use `setxkbmap`:
+    * `setxkbmap -option ctrl:swapcaps` (swaps capslock and ctrl)
+    * `setxkbmap -option ctrl:nocaps` (capslock becomes an additional ctrl)
+    * to clear all options first: `setxkbmap -option`
+    * to make persistent across reboots:
+        * add to xfce session startup: Settings → Session and Startup → Application Autostart
+        * or add to `~/.xprofile`
 
 #### avoiding the esc key
 
