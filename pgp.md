@@ -50,3 +50,14 @@ gpg --list-secret-keys --keyid-format=long
 # this revokes the key; do not run this during a normal restore
 gpg --import revocation.asc
 ```
+
+## use with git
+
+```shell
+$ git config --global --unset gpg.format
+$ gpg --list-secret-keys --keyid-format=long
+$ git config --global user.signingkey <GPG KEY ID>
+$ git config --global commit.gpgsign true
+$ git config --global tag.gpgSign true
+```
+
